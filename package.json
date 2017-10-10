@@ -14,5 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "rxjs": "^5.4.3"
+  },
+  "devDependencies": {
+    "webpack": "^3.6.0"
   }
 }
