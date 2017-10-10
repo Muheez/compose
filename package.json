@@ -11,5 +11,8 @@
     "\"architecture\""
   ],
   "author": "muheez akanni <muheezakanni@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.4.3"
+  }
 }
