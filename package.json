@@ -4,7 +4,8 @@
   "description": "component architecture library",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --colors --progress"
+    "build": "webpack --colors --progress",
+    "test":  "jasmine"
   },
   "keywords": [
     "\"component\"",
