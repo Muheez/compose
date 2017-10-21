@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "jasmine": "^2.8.0",
+    "jasmine-console-reporter": "^2.0.1",
     "jsdom": "^11.3.0",
     "webpack": "^3.6.0"
   }
