@@ -19,5 +19,5 @@ gulp.task("test", function () {
 gulp.task("bundle", function () {
     gulp.src("./lib/core.js")
         .pipe(webpack(require("./webpack.config.js")))
-        .pipe(gulp.dest("/"));
+        .pipe(gulp.dest("./"));
 });
