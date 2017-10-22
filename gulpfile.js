@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
     jasmine = require("gulp-jasmine"),
-    reporter = require("jasmine-console-reporter")
+    reporter = require("jasmine-console-reporter"),
+    webpack = require("gulp-webpack");
 
 gulp.task("test", function () {
     gulp.src("spec/test.js")
@@ -13,4 +14,10 @@ gulp.task("test", function () {
                 activity: false
             })
         }));
-})
+});
+
+gulp.task("bundle", function () {
+    gulp.src("./lib/core.js")
+        .pipe(webpack(require("./webpack.config.js")))
+        .pipe(gulp.dest("/"));
+});
