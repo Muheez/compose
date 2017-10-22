@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --colors --progress",
-    "test":  "jasmine"
+    "test": "jasmine"
   },
   "keywords": [
     "\"component\"",
@@ -17,6 +17,7 @@
     "rxjs": "^5.4.3"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "jasmine": "^2.8.0",
     "jasmine-console-reporter": "^2.0.1",
     "jsdom": "^11.3.0",
