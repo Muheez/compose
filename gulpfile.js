@@ -4,7 +4,7 @@ var gulp = require("gulp"),
     webpack = require("gulp-webpack");
 
 gulp.task("test", function () {
-    gulp.src("spec/test.js")
+    gulp.src("spec/*.js")
         .pipe(jasmine({
             reporter: new reporter({
                 colors: 1,
@@ -21,3 +21,10 @@ gulp.task("bundle", function () {
         .pipe(webpack(require("./webpack.config.js")))
         .pipe(gulp.dest("./"));
 });
+
+gulp.task("default", ["test", "bundle", "watch"]);
+
+gulp.task("watch", function () {
+    gulp.watch("./lib/*.js", ["test", "bundle"]);
+})
+
