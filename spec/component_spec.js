@@ -58,4 +58,12 @@ describe("instantiating a component", function () {
         
         expect(CORE.components.hasOwnProperty(".para")).toBe(true);
     });
+
+    it("should throw error if component already exists", function () {
+        var p = new Component(".para");
+
+        expect(function () {
+            return new Component(".para");
+        }).toThrowError(Error);
+    })
 })
