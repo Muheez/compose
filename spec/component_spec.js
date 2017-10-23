@@ -18,11 +18,19 @@ describe("instantiating a component", function () {
     global.document = dom.window.document;
 
     //fake CORE object
-    var CORE = {
-        components: {}
-    };
-    //get component constructor with fake CORE
-    var Component = componentModule(CORE);
+    var CORE,
+        Component;
+
+    beforeEach(function () {
+        //mock CORE
+        CORE = {
+            components: {}
+        }
+
+        //get component constructor with fake CORE
+        Component = componentModule(CORE);
+    })
+    
 
     it("should return error if no arguments are provided", function () {
         expect(function () {
@@ -42,6 +50,7 @@ describe("instantiating a component", function () {
         expect(function () {
             return new Component(".classthatdoesnotexist");
         }).toThrowError(Error);
+        expect(CORE.components).toEqual({});
     });
 
     it("should store component instance in CORE components object", function () {
