@@ -22,9 +22,9 @@ gulp.task("bundle", function () {
         .pipe(gulp.dest("./"));
 });
 
-gulp.task("default", ["test", "bundle", "watch"]);
+gulp.task("default", ["bundle", "test"]);
 
 gulp.task("watch", function () {
-    gulp.watch("./lib/*.js", ["test", "bundle"]);
+    gulp.watch("./lib/*.js", ["bundle"]);
 })
 
