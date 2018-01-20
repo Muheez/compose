@@ -25,6 +25,6 @@ gulp.task("bundle", function () {
 gulp.task("default", ["bundle", "test"]);
 
 gulp.task("watch", function () {
-    gulp.watch("./lib/*.js", ["bundle"]);
+    gulp.watch("./lib/*.js", ["bundle", "test"]);
 })
 
